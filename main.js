@@ -217,6 +217,11 @@ elSelec2.addEventListener('change', function() {
       elList.appendChild(elItim);
     }); 
 });
+ 
+
+//------------------------------------------------------------------------------------------------------------ 
+
+
 
   let elBten = document.querySelector('.js-btn');
 
@@ -229,7 +234,7 @@ elSelec2.addEventListener('change', function() {
    var elCol = elTem ? 'dark' : 'light';
     
    window.localStorage.setItem('elTem', elCol);  
-   
+
    domgachiqaratir();
   })
 
