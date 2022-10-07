@@ -110,4 +110,19 @@ body {
     margin: 20px 0px;
     font-weight: 700;
     font-size: 28px;
+  } 
+
+  .dark{ 
+
+    background-color: red; 
+    color: #fff;
+  } 
+  .js-btn{ 
+
+    width: 200px; 
+    background-color: aqua; 
+    color: #000; 
+    border-radius: 5px; 
+    margin-top: 50px;
   }
+  

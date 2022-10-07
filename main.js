@@ -68,7 +68,7 @@ opList.forEach((item) => {
    newOption.textContent = item;
 
    elSel.appendChild(newOption);
-});
+}); 
 
 
 elSel.addEventListener('change', function(evt){
@@ -77,11 +77,14 @@ elSel.addEventListener('change', function(evt){
   var elSelVal = elSel.value;
   var filteredArr = [];
 
-  elList.innerHTML = '';
-  films.forEach((el) =>{
+  elList.innerHTML = ''; 
+
+  films.forEach((el) =>{ 
+    
      if(el.genres.includes(elSelVal)){
-       filteredArr.push(el)
-     }
+       filteredArr.push(el);
+     } 
+
   });
  
 
@@ -215,11 +218,34 @@ elSelec2.addEventListener('change', function() {
     }); 
 });
 
+  let elBten = document.querySelector('.js-btn');
+
+  var elTem = false;
+
+  elBten.addEventListener('click', function(){ 
+
+   elTem = !elTem; 
+
+   var elCol = elTem ? 'dark' : 'light';
+    
+   window.localStorage.setItem('elTem', elCol);  
+   
+   domgachiqaratir();
+  })
 
 
+function domgachiqaratir(){ 
 
+  if(window.localStorage.getItem('elTem') == 'dark'){ 
 
+    document.body.classList.add('dark'); 
 
+  }else{ 
+
+   document.body.classList.remove('dark');
+  }
+}
+domgachiqaratir();
  
 
 
